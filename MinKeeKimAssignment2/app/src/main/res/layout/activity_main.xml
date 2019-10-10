@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="Enter a number between 1 and 10."
+        app:layout_constraintBottom_toTopOf="@+id/numberInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Enter a number between 1 and 10." />
+
+    <EditText
+        android:id="@+id/numberInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:hint="Number (1-10)"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGuide" />
+
+    <Button
+        android:id="@+id/buttonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="countUp"
+        android:text="COUNT UP"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBottom"
+        app:layout_constraintEnd_toEndOf="@+id/buttonBottom"
+        app:layout_constraintStart_toStartOf="@id/buttonBottom"
+        app:layout_constraintTop_toBottomOf="@+id/numberInput" />
+
+    <Button
+        android:id="@+id/buttonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="268dp"
+        android:gravity="center"
+        android:onClick="countDown"
+        android:text="COUNT DOWN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
